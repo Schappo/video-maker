@@ -4,7 +4,8 @@
   "description": "Projeto Open source para fazer video automatizados",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "standard && node index.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/Schappo/video-maker/issues"
   },
-  "homepage": "https://github.com/Schappo/video-maker#readme"
+  "homepage": "https://github.com/Schappo/video-maker#readme",
+  "devDependencies": {
+    "standard": "^14.3.4"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
