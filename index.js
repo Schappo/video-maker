@@ -1,22 +1,8 @@
-const readline = require('readline-sync')
+import getUserInputs from './user-inputs'
 
 function start () {
-  const content = {}
+  const content = getUserInputs()
 
-  content.searchTerm = askAndReturnSearcTerm()
-  content.prefix = askAndReturnPrefix()
-
-  function askAndReturnSearcTerm () {
-    return readline.question('Type a Wikipedia search Term: ')
-  }
-
-  function askAndReturnPrefix () {
-    const prefixes = ['Who is', 'What is', 'The History OF']
-    const selectedPrefixIndex = readline.keyInSelect(prefixes)
-    const selectedPRefixText = prefixes[selectedPrefixIndex]
-
-    return selectedPRefixText
-  }
   console.log(content)
 }
 start()
