@@ -24,6 +24,11 @@
     "standard": "^14.3.4"
   },
   "dependencies": {
-    "readline-sync": "^1.4.10"
+    "express": "^4.17.1",
+    "express-http-proxy": "^1.6.2",
+    "puppeteer": "^5.2.1",
+    "puppeteer-core": "^5.2.1",
+    "readline-sync": "^1.4.10",
+    "request": "^2.88.2"
   }
 }

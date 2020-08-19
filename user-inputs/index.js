@@ -1,22 +1,21 @@
 const readline = require('readline-sync')
 
 function getUserInputs () {
-  const content = {}
-
-  content.searchTerm = askAndReturnSearcTerm()
-  content.prefix = askAndReturnPrefix()
-
-  function askAndReturnSearcTerm () {
-    return readline.question('Type a Wikipedia search Term: ')
+  const content = {
+    loop: true
+  }
+  while (content.loop) {
+    let param = readline.question('parametro de busca (Parametro 0 encerra a busca): ')
+    if (param === '0') {
+      content.loop = false
+    }
+    param.trim()
+    param = param.toLowerCase()
+    content[param] = param
   }
 
-  function askAndReturnPrefix () {
-    const prefixes = ['Who is', 'What is', 'The History OF']
-    const selectedPrefixIndex = readline.keyInSelect(prefixes)
-    const selectedPRefixText = prefixes[selectedPrefixIndex]
-
-    return selectedPRefixText
-  }
+  delete content.loop
+  delete content['0']
   return content
 }
 

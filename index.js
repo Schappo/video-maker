@@ -1,8 +1,9 @@
 import getUserInputs from './user-inputs'
 
+import getGoogleSearchData from './robots'
+
 function start () {
   const content = getUserInputs()
-
-  console.log(content)
+  console.log(getGoogleSearchData(content))
 }
 start()
