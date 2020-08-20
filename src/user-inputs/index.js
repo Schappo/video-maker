@@ -16,7 +16,11 @@ function getUserInputs () {
 
   delete content.loop
   delete content['0']
-  return content
+  return {
+    yoga: 'yoga',
+    florianopolis: 'florianopolis',
+    ingleses: 'ingleses'
+  }
 }
 
 export default getUserInputs
